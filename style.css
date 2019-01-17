@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+body {
+    font-family: "Roboto", "sans-seref";
+    position: relative;
+    left: 40%;
+    margin-top: 5%;
+}
+
+.calc-btn-num {
+    background-color: gray;
+    color: black;
+    height: 50px;
+    width: 25px;
+    text-align: center;
+    border: 1px solid rgb(46, 45, 45);
+    padding: 10px;
+    font-size: 32pt;
+    font-weight: 100;
+    cursor: pointer;
+}
+.calc-btn-num:hover {
+    color: red;
+}
+.row {
+    display: table;
+    table-layout: fixed;
+    width: 300px;
+}
+.column {
+    display: table-cell;
+}
+#calc-period {
+    width: 25px;
+    background-color: gray;
+    color: black;
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(46, 45, 45);
+    padding: 10px;
+    font-size: 32pt;
+    font-weight: 100;
+    cursor: pointer; 
+}
+#calc-period:hover {
+    color: red;
+}
+#calc-zero {
+    width: 76px;
+    background-color: gray;
+    color: black;
+    height: 50px;
+    text-align: center;
+    padding: 8px;
+    font-size: 32pt;
+    font-weight: 100;
+    cursor: pointer;
+    border: 1px solid rgb(46, 45, 45);
+    border-radius: 0 0 0 7px;
+}
+#calc-zero:hover {
+    color: red;
+}
+#calc-clear {
+    width: 73px;
+    background-color: orange;
+    color: black;
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(46, 45, 45);
+    padding: 10px;
+    font-size: 32pt;
+    font-weight: 100;
+    cursor: pointer;
+}
+#calc-clear:hover {
+    color: red;
+}
+#calc-display {
+    text-align: right;
+    height: 60px;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+    font-size: 40pt;
+    font-weight: bold;
+    color: black;
+    background-color: #575656;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 7px 7px 0 0;
+    margin-top: 30px;
+}
+
+#calc-equal {
+    border-radius: 0 0 7px 0;
+}
+#calc-equal:hover {
+    color: red;
+}
+.calc-btn-operation {
+    background-color: orange;
+    color: white;
+    height: 50px;
+    width: 25px;
+    text-align: center;
+    border: 1px solid rgb(46, 45, 45);
+    padding: 10px;
+    font-size: 32pt;
+    font-weight: 100;
+    cursor: pointer;
+}
+.calc-btn-operation:hover {
+    color: red;
+}
+h1 {
+    text-align: center;
+}
