@@ -76,7 +76,8 @@ body {
 #calc-clear:hover {
     color: red;
 }
-#calc-display {
+.display-column {
+    width: 278px;
     text-align: right;
     height: 60px;
     border-left: 1px solid gray;

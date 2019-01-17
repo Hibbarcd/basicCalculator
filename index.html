@@ -5,44 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="Stylesheet" type="text/css" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <title>JS Calculator</title>
+    <title>Basic Calculator</title>
 </head>
 <body>
-    <div class= "calc-wrapper">
-        <div class="row">
-            <div class="column" id="calc-display">0</div>
-        </div>
-        <div class="row">
-                <div class="calc-btn-operation-clear column" id="calc-clear">AC</div>
-                <div class="calc-btn-operation column" id="calc-backspace">&#8676;</div>
-                <div class="calc-btn-operation column" id="calc-divide">&#247;</div>
+        <form name="calculator" id="calc">
+            <div class="row">
+                <input type="text" name="answer" class="display-column" value="" id="calc-display" />
+            </div>
+            <div class="row">
+                <div class="calc-btn-operation-clear column" id="calc-clear" onclick="calculator.answer.value = ''">AC</div>
+                <div class="calc-btn-operation column" id="calc-backspace" onclick= "backspace();">&#8676;</div>
+                <div class="calc-btn-operation column" id="calc-divide" onclick="calculator.answer.value += '/'">&#247;</div>
             </div> 
-        <div class="row">
-            <div class="calc-btn-num column" id="calc-seven" value="7">7</div>
-            <div class="calc-btn-num column" id="calc-eight" value="8">8</div>
-            <div class="calc-btn-num column" id="calc-nine" value="9">9</div>
-            <div class="calc-btn-operation column" id="calc-multiply">*</div>
-        </div>        
-        <div class="row">
-            <div class="calc-btn-num column" id="calc-four">4</div>
-            <div class="calc-btn-num column" id="calc-five">5</div>
-            <div class="calc-btn-num column" id="calc-six">6</div>
-            <div class="calc-btn-operation column" id="calc-subtract">-</div>
-        </div>
-        <div class="row">
-            <div class="calc-btn-num column" id="calc-one">1</div>
-            <div class="calc-btn-num column" id="calc-two">2</div>
-            <div class="calc-btn-num column" id="calc-three">3</div>
-            <div class="calc-btn-operation column" id="calc-addition">+</div>
-        </div>
-        <div class="row">
-                <div class="calc-btn-num column" id="calc-zero">0</div>
-                <div class="calc-btn-num column" id="calc-period">.</div>
-                <div class="calc-btn-operation column" id="calc-equal">=</div>
-        </div>
+            <div class="row">
+                <div class="calc-btn-num column" id="calc-seven" value="7" onclick="calculator.answer.value += 7">7</div>
+                <div class="calc-btn-num column" id="calc-eight" value="8" onclick="calculator.answer.value += 8">8</div>
+                <div class="calc-btn-num column" id="calc-nine" value="9" onclick="calculator.answer.value += 9">9</div>
+                <div class="calc-btn-operation column" id="calc-multiply"onclick="calculator.answer.value += '*'">*</div>
+            </div>        
+             <div class="row">
+                <div class="calc-btn-num column" id="calc-four" value="4" onclick="calculator.answer.value += 4">4</div>
+                <div class="calc-btn-num column" id="calc-five"value="5" onclick="calculator.answer.value += 5">5</div>
+                <div class="calc-btn-num column" id="calc-six"value="6" onclick="calculator.answer.value += 6">6</div>
+                <div class="calc-btn-operation column" id="calc-subtract" onclick="calculator.answer.value += '-'">-</div>
+            </div>
+            <div class="row">
+                <div class="calc-btn-num column" id="calc-one"value="1" onclick="calculator.answer.value += 1">1</div>
+                <div class="calc-btn-num column" id="calc-two"value="2" onclick="calculator.answer.value += 2">2</div>
+                <div class="calc-btn-num column" id="calc-three"value="3" onclick="calculator.answer.value += 3">3</div>
+                <div class="calc-btn-operation column" id="calc-addition" onclick="calculator.answer.value += '+'">+</div>
+            </div>
+            <div class="row">
+                <div class="calc-btn-num column" id="calc-zero" onclick="calculator.answer.value += 0">0</div>
+                <div class="calc-btn-num column" id="calc-period" onclick="calculator.answer.value += '.'">.</div>
+                <div class="calc-btn-operation column" id="calc-equal" onclick="calculator.answer.value = eval(calculator.answer.value)">=</div>
+            </div>
+        </form>
     </div>
 </body>
-<script type="javascript" href="calculator.js"></script>
+<script>
+const backspace = function() {
+    const calculate = document.getElementById("calc-display").value;
+    document.getElementById('calc-display').value=calculate.substring(0,calculate.length -1);   
+  } 
+</script>
 </html>
